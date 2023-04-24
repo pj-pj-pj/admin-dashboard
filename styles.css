@@ -37,7 +37,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 25px;
 }
 
 .header-top, .header-bottom {
@@ -62,8 +61,8 @@ header .icon {
 
 .profile-pic {
   border-radius: 100%;
+  max-width: 48px;
 }
-
 
 /* .header-top .search-bar */
 
@@ -87,10 +86,6 @@ input {
   display: grid;
   justify-content: end;
   grid-template-columns: repeat(3, auto);
-}
-
-.user .profile-pic {
-  max-width: 48px;
 }
 
 /* */
@@ -172,33 +167,54 @@ ul {
   padding-left: 10px;
 }
 
-/* projects */
+/* content */
 
-.projects {
-  width: 95%;
-  margin: 0 auto;
-}
-
-.projects h2 {
-  padding-bottom: 11px;
-  font-size: 1.2rem;
-}
-
-.band {
+.content {
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
+  margin: 35px auto;
 }
 
 .card {
-  padding: 25px 20px;
+  padding: 30px 30px;
   background: white;
   color: #444;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   border-radius: 8px;
+}
+
+.content h2 {
+  padding-bottom: 11px;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #444;
+}
+
+/* projects */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.band {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.band .card {
   border-left: 8px black solid;
 
   position: relative;
@@ -206,8 +222,7 @@ ul {
   transition: all .1s ease-in;
 }
 
-.card:hover {
-  top: -2px;
+.band .card:hover {
   box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
 }
 
@@ -215,13 +230,62 @@ ul {
   font-size: 1.1rem;
 }
 
-.card p {
+.projects p {
   line-height: 1.4;
 }
 
+/* announcements */
 
-@media only screen and (min-width: 700px) {
+.announcements {
+  align-items: baseline;
+  grid-template-rows: auto 1fr;
+  order: -1;
+}
+
+.announcements p {
+  height: 50px;
+  overflow: hidden;
+}
+
+.announcements hr {
+  margin: 15px 0;
+}
+
+/* trends */
+
+.trending {
+  display: grid;
+  grid-template: repeat(4, max-content) / 1fr;
+  grid-gap: 10px;
+}
+
+.trends {
+  display: grid;
+  grid-template: auto auto / auto 1fr ;
+  grid-column-gap: 20px;
+  align-items: center;
+}
+
+.trends .profile-pic {
+  grid-column: 1 / 2;
+}
+
+@media only screen and (min-width: 1000px) {
+  .content {
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .projects {
+    grid-row: 1 / -1;
+  }
+
   .band {
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
   }  
+
+  .announcements {
+    order: 0;
+  }
 }
