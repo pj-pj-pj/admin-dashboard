@@ -182,8 +182,8 @@ ul {
   background: white;
   color: #444;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content auto;
   border-radius: 8px;
 }
 
@@ -232,6 +232,22 @@ a:visited {
 
 .projects p {
   line-height: 1.4;
+}
+
+.engagement-btns {
+  margin-top: 25px;
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.engagement-btns img {
+  width: 34px;
+  border-radius: 20px;
+  padding: 6px;
+}
+
+.engagement-btns img:hover {
+  background-color: #b6b6b6;
 }
 
 /* announcements */
