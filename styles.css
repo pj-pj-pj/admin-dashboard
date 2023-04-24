@@ -16,7 +16,7 @@ body {
 }
 
 .sidebar {
-  background-color: blue;
+  background-color: rgb(115, 115, 172);
   flex-grow: 1;
   flex-basis: 15rem;
 }
@@ -136,6 +136,39 @@ input {
   width: 85px;
   margin: 2px 0px;
   text-align: center;
+}
+
+/* sidebar */
+
+.sidebar {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 35px;
+  padding: 20px;
+}
+
+.dashboard-header .icon {
+  width: 50px;
+}
+
+.sidebar ul .icon {
+  width: 25px;
+}
+
+ul, .dashboard-header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: min(10%, 20px);
+  align-items: center;
+}
+
+ul li, ul .icon {
+  list-style: none;
+  padding-bottom: 13px;
+}
+
+ul {
+  padding-left: 10px;
 }
 
 /* projects */

@@ -10,19 +10,22 @@
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h2>Dashboard</h2>
+      <div class="dashboard-header">
+        <img class="icon" src="/assets/dashboard.svg" alt="">
+        <h2>Dashboard</h2>
+      </div>
       <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
+        <img class="icon" src="/assets/home.png" alt=""><li>Home</li>
+        <img class="icon" src="/assets/profile.png" alt=""><li>Profile</li>
+        <img class="icon" src="/assets/messages.png" alt=""><li>Messages</li>
+        <img class="icon" src="/assets/history.png" alt=""><li>History</li>
+        <img class="icon" src="/assets/tasks.png" alt=""><li>Tasks</li>
+        <img class="icon" src="/assets/communities.svg" alt=""><li>Communities</li>
       </ul>
       <ul>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
+        <img class="icon" src="/assets/settings.svg" alt=""><li>Settings</li>
+        <img class="icon" src="/assets/support.svg" alt=""><li>Support</li>
+        <img class="icon" src="/assets/privacy.svg" alt=""><li>Privacy</li>
       </ul>
     </aside>
     <main>
@@ -30,21 +33,23 @@
         <section class="header-top">
           <form class="search-bar" action="/search" method="get">
             <label for="query">
-              <img class="search icon" src="/assets/magnify.svg" alt="search-icon">
+              <img class="search icon" src="/assets/search.png" alt="search-icon">
             </label>
             <input type="search" id="query" name="search-query">
           </form>
           <div class="user">
-            <img class="notif icon" src="/assets/bell-ring-outline.svg" alt="notifications">
-            <img class="profile-pic" src="assets/prof-pic.jpg" alt="profile-pic">
-            <p>Finn Jake</p>
+            <img class="notif icon" src="/assets/notification.png" alt="notifications">
+            <img class="profile-pic" src="assets/prof-pic.png" alt="profile-pic">
+            <p>Star Butterfly</p>
           </div>
         </section>
         <section class="header-bottom">
-          <img class="profile-pic" src="assets/prof-pic.jpg" alt="profile-pic">
-          <p>Hi there,</p>
-          <h2>Finn Jake (@finnjake)</h2>
-          <div class="button">
+          <div class="profile"> 
+            <img class="profile-pic" src="assets/prof-pic.png" alt="profile-pic">
+            <p>Hi there,</p>
+            <h2>Star Butterfly (@bfly)</h2>
+          </div>
+          <div class="profile-btn">
             <button>New</button>
             <button>Upload</button>
             <button>Share</button>
