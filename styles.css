@@ -22,7 +22,6 @@ body {
 }
 
 main {
-  background-color: black;
   flex: 999;
   min-width: 60%;
 }
@@ -32,11 +31,13 @@ main {
 
 header {
   background-color: white;
-
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .header-top, .header-bottom {
@@ -173,6 +174,54 @@ ul {
 
 /* projects */
 
-section.projects {
-  background-color: rgb(233, 233, 233);
+.projects {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  padding-bottom: 11px;
+  font-size: 1.2rem;
+}
+
+.band {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  padding: 25px 20px;
+  background: white;
+  color: #444;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border-radius: 8px;
+  border-left: 8px black solid;
+
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.card p {
+  line-height: 1.4;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }  
 }
