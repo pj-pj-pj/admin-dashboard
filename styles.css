@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --highlight-color: #0ea5e9;
+  --white-ish: #e0f2fe;
+  --font-color: #444;
+  --highlight-color-darker: #0369a1;
+  --highlight-color-two: #0369a1;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -16,7 +27,7 @@ body {
 }
 
 .sidebar {
-  background-color: rgb(115, 115, 172);
+  background-color: var(--highlight-color);
   flex-grow: 1;
   flex-basis: 15rem;
 }
@@ -75,9 +86,14 @@ header .icon {
 input {
   border: 0;
   min-width: 5px;
-  background-color: rgb(185, 185, 185);
+  background-color: var(--white-ish);
   border-radius: 20px;
-  height: 28px;
+  height: 33px;
+  padding: 0 15px;
+}
+
+input:hover {
+  background-color: #bae6fd;
 }
 
 /* .header-top .user */
@@ -86,6 +102,12 @@ input {
   display: grid;
   justify-content: end;
   grid-template-columns: repeat(3, auto);
+}
+
+header .icon:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--white-ish);
 }
 
 /* */
@@ -123,7 +145,7 @@ input {
 }
 
 .profile-btn button {
-  background-color: black;
+  background-color: var(--highlight-color);
   color: white;
 
   border-radius: 18px;
@@ -134,13 +156,21 @@ input {
   text-align: center;
 }
 
-/* sidebar */
+.profile-btn button:hover {
+  background-color: var(--highlight-color-darker);
+}
 
+
+/* sidebar */
 .sidebar {
   display: grid;
   grid-auto-rows: min-content;
   grid-gap: 35px;
   padding: 20px;
+}
+
+.sidebar .icon {
+  filter: grayscale(100%) brightness(100%);
 }
 
 .dashboard-header .icon {
@@ -160,7 +190,17 @@ ul, .dashboard-header {
 
 ul li, ul .icon {
   list-style: none;
-  padding-bottom: 13px;
+  padding: 13px 0;
+  border-radius: 20px;
+}
+
+ul li:hover {
+  color: white;
+  transition: .2s;
+  padding-left: 15px;
+  margin-left: -13px;
+  background-color: var(--highlight-color-darker);
+  cursor: pointer;
 }
 
 ul {
@@ -180,10 +220,9 @@ ul {
 .card {
   padding: 30px 30px;
   background: white;
-  color: #444;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  display: grid;
-  grid-template-rows: min-content auto;
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
 }
 
@@ -197,7 +236,7 @@ a {
 }
 
 a:visited {
-  color: #444;
+  color: var(--font-color);
 }
 
 /* projects */
@@ -215,7 +254,7 @@ a:visited {
 }
 
 .band .card {
-  border-left: 8px black solid;
+  border-left: 8px var(--highlight-color-two) solid;
 
   position: relative;
   top: 0;
@@ -226,8 +265,9 @@ a:visited {
   box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
 }
 
-.card h3 {
+h3 {
   font-size: 1.1rem;
+  margin-bottom: 5px;
 }
 
 .projects p {
@@ -247,7 +287,7 @@ a:visited {
 }
 
 .engagement-btns img:hover {
-  background-color: #b6b6b6;
+  background-color: var(--white-ish);
 }
 
 /* announcements */
@@ -261,6 +301,7 @@ a:visited {
 .announcements p {
   height: 50px;
   overflow: hidden;
+  line-height: 1.1rem;
 }
 
 .announcements hr {
